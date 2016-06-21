@@ -13,6 +13,7 @@ class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var photoView: UIImageView!
     
     @IBOutlet weak var takePhotoButton: UIButton!
+    @IBOutlet weak var captionField: UITextField!
     
     var imagePicker: UIImagePickerController!
     
@@ -58,6 +59,19 @@ class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         // Dismiss UIImagePickerController to go back to your original view controller
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func postPhoto(sender: AnyObject) {
+        
+        Post.postUserImage(photoView.image, withCaption: captionField.text, withCompletion: {(success: Bool, error: NSError?) in
+            if success{
+                print ("Photo Upload Successfull")
+            }
+            else{
+            print ("failed")
+            }
+        })
+    }
+    
     
     /*
     // MARK: - Navigation
