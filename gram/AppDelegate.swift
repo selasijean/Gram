@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        Parse.initializeWithConfiguration(
+            ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "Gram"
+                configuration.clientKey = "ajfdjkajgkjfkdlgsakdhfkdjkagjklfjdgk"
+                configuration.server = "https://gentle-plateau-53645.herokuapp.com/parse"
+            })
+            )
+        if PFUser.currentUser() != nil{
+            let tabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
+            window?.rootViewController = tabBarController
+            
+        }
+            
         return true
     }
 
