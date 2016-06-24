@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>M13ProgressSuite.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,7 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9CF363B2C7770CC34A4FE1C09A372D1E</key>
+		<key>698A37611B31C6E9B1C5AEC735CECE70</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACDC41CA270DFD419E81BDD1E256EB83</key>
 		<dict>
 			<key>primary</key>
 			<true/>

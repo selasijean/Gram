@@ -22,6 +22,8 @@
 		4CCD27881D19109600B55A73 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD27871D19109600B55A73 /* Post.swift */; };
 		4CCD278A1D19C8B900B55A73 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD27891D19C8B900B55A73 /* HomeViewController.swift */; };
 		4CCD278C1D19DAB400B55A73 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD278B1D19DAB400B55A73 /* PostTableViewCell.swift */; };
+		4CCD278E1D1B3EC300B55A73 /* ProfilePhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD278D1D1B3EC300B55A73 /* ProfilePhotosCell.swift */; };
+		4CCD27941D1C96BE00B55A73 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD27931D1C96BE00B55A73 /* LikeButton.swift */; };
 		CC186611430EC9F58B882BC0 /* Pods_gramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59CC762B106412CB28B440C /* Pods_gramUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		4CCD27871D19109600B55A73 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4CCD27891D19C8B900B55A73 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4CCD278B1D19DAB400B55A73 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		4CCD278D1D1B3EC300B55A73 /* ProfilePhotosCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotosCell.swift; sourceTree = "<group>"; };
+		4CCD27931D1C96BE00B55A73 /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		54806DF4FAEE2DE327A54C4A /* Pods-gramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gramUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-gramUITests/Pods-gramUITests.release.xcconfig"; sourceTree = "<group>"; };
 		722B8F297B5D787BEA80A342 /* Pods_gramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		756242374263BFC705ED6C6A /* Pods-gramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gramUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gramUITests/Pods-gramUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 				4CCD278B1D19DAB400B55A73 /* PostTableViewCell.swift */,
 				4CCD27551D18957300B55A73 /* ViewController.swift */,
 				4CCD27571D18957300B55A73 /* Main.storyboard */,
+				4CCD27931D1C96BE00B55A73 /* LikeButton.swift */,
+				4CCD278D1D1B3EC300B55A73 /* ProfilePhotosCell.swift */,
 				4CCD27891D19C8B900B55A73 /* HomeViewController.swift */,
 				4CCD27871D19109600B55A73 /* Post.swift */,
 				4CCD27851D18DDBA00B55A73 /* PhotoCaptureViewController.swift */,
@@ -451,7 +457,9 @@
 				4CCD278C1D19DAB400B55A73 /* PostTableViewCell.swift in Sources */,
 				4CCD27881D19109600B55A73 /* Post.swift in Sources */,
 				4CCD27841D18CB9700B55A73 /* ProfileViewController.swift in Sources */,
+				4CCD278E1D1B3EC300B55A73 /* ProfilePhotosCell.swift in Sources */,
 				4CCD278A1D19C8B900B55A73 /* HomeViewController.swift in Sources */,
+				4CCD27941D1C96BE00B55A73 /* LikeButton.swift in Sources */,
 				4CCD27541D18957300B55A73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

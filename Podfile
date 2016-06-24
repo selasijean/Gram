@@ -8,7 +8,7 @@ target 'gram' do
   # Pods for gram
   pod 'Parse'
   pod 'ParseUI'
-
+  pod 'M13ProgressSuite'
   target 'gramTests' do
     inherit! :search_paths
     

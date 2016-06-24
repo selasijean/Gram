@@ -14,6 +14,7 @@ class PostTableViewCell: UITableViewCell {
     
     @IBOutlet weak var photoView: PFImageView!
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var likeButton: LikeButton!
     
     var gramPost: PFObject! {
         didSet {
@@ -23,6 +24,7 @@ class PostTableViewCell: UITableViewCell {
 //              self.captionLabel.text = caption
 //            }
             self.captionLabel.text = gramPost["caption"] as? String
+    
         }
     }
 

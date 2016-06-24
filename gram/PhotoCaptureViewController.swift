@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import M13ProgressSuite
 
 class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -61,6 +62,16 @@ class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     @IBAction func postPhoto(sender: AnyObject) {
+//        M13ProgressView.init(frame: view.bounds)
+//        self.view.addSubview(M13ProgressView.v)
+//        let progressView = M13ProgressViewPie()
+//        progressView.backgroundRingWidth = 2.0
+//        progressView.setProgress(0.1, animated: true)
+////        let progressView = M13ProgressViewPie.init()
+////        progressView.backgroundRingWidth = 2.0
+//        self.view.addSubview(progressView)
+        
+//        progressView.animationDuration = 5.0
         
         Post.postUserImage(photoView.image, withCaption: captionField.text, withCompletion: {(success: Bool, error: NSError?) in
             if success{
@@ -70,6 +81,8 @@ class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDeleg
             print ("failed")
             }
         })
+        
+        
     }
     
     
