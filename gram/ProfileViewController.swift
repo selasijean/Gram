@@ -55,7 +55,7 @@ class ProfileViewController: UIViewController,UICollectionViewDelegate  {
     
     func loadData(){
         let query = PFQuery(className: "Post")
-        //query.includeKey("author")
+        query.includeKey("author")
         query.orderByDescending("createdAt")
         query.findObjectsInBackgroundWithBlock { (posts:[PFObject]?, error: NSError?) -> Void in
             if error == nil{
@@ -80,15 +80,24 @@ class ProfileViewController: UIViewController,UICollectionViewDelegate  {
    
     }
 
-    /*
-    // MARK: - Navigation
+    
+     //MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+     //In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPathForCell(cell)
+        let photo = posts![(indexPath?.row)!]
+        let detailViewController = segue.destinationViewController as! IndPhotoViewController
+        detailViewController.photo = photo
+        detailViewController.index = indexPath?.row
+        
+         //Get the new view controller using segue.destinationViewController.
+         //Pass the selected object to the new view controller.
+        
     }
-    */
+    
 
 }
 extension ProfileViewController: UICollectionViewDataSource {
