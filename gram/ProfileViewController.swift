@@ -46,6 +46,11 @@ class ProfileViewController: UIViewController,UICollectionViewDelegate  {
         flowLayout.minimumInteritemSpacing = 0
         flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 15)
         
+        let logo = UIImage(named: "gram3")
+        
+        let logoView = UIImageView(image: logo)
+        self.navigationController?.navigationBar.topItem?.titleView = logoView
+        
         
     }
     
@@ -84,15 +89,18 @@ class ProfileViewController: UIViewController,UICollectionViewDelegate  {
      //MARK: - Navigation
 
      //In a storyboard-based application, you will often want to do a little preparation before navigation
+    //AnyObject?
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "logOutSegue"{
         
+        }else{
         let cell = sender as! UICollectionViewCell
         let indexPath = collectionView.indexPathForCell(cell)
         let photo = posts![(indexPath?.row)!]
         let detailViewController = segue.destinationViewController as! IndPhotoViewController
         detailViewController.photo = photo
         detailViewController.index = indexPath?.row
-        
+        }
          //Get the new view controller using segue.destinationViewController.
          //Pass the selected object to the new view controller.
         

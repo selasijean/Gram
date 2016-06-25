@@ -62,9 +62,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             if error == nil{
                 self.posts = posts
                 self.tableView.reloadData()
-                print(posts)
+                //print(posts)
             }else{
-                print(error)
+                //print(error)
             }
             
         }
@@ -139,6 +139,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.likeButton.setImage(UIImage(named: "like2"),forState: UIControlState.Normal)
             
         }else{
+            cell.likeButton.setImage(UIImage(named: "like"),forState: UIControlState.Normal)
             cell.likeButton.LikeState = false
             
         }

@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     override func viewDidAppear(animated: Bool) {
         
-        UIView.animateWithDuration(1.5, animations: {() -> Void in
+        UIView.animateWithDuration(1.0, animations: {() -> Void in
             let endingColor = UIColor(red: (255.0/255.0), green: (61.0/255.0), blue: (24.0/255.0), alpha: 1.0)
             self.gettingStartedButton.backgroundColor = endingColor
 //            let scaleTransform = CGAffineTransformMakeScale(1.5, 1.5)

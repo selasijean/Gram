@@ -65,6 +65,23 @@ class IndPhotoViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ICell") as! IndTableViewCell
         
+        //
+        let likers = photo!["likers"] as? [String]
+        
+        if likers?.contains("\(PFUser.currentUser()!["username"])") == true {
+            cell.likeButton.LikeState = true
+            cell.likeButton.tintColor = UIColor.redColor()
+            cell.likeButton.setImage(UIImage(named: "like2"),forState: UIControlState.Normal)
+            
+        }else{
+            cell.likeButton.setImage(UIImage(named: "like"),forState: UIControlState.Normal)
+            cell.likeButton.tintColor = UIColor.blackColor()
+            cell.likeButton.LikeState = false
+            
+        }
+        
+        cell.likeButton.addTarget(self, action: #selector(IndPhotoViewController.buttonClicked(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        //
         cell.gramPost = photo
         
         return cell
@@ -75,6 +92,36 @@ class IndPhotoViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
+    func buttonClicked(sender: LikeButton){
+        //shorter
+        //        if sender.selected == true{
+        //            sender.tintColor = UIColor.redColor()
+        //        }
+        //
+        //        sender.selected = !sender.selected
+        //
+        var photo1 = photo!
+        var likers = photo1["likers"] as? [String]
+        let username = PFUser.currentUser()!["username"] as! String
+        
+        if !sender.LikeState{
+            sender.tintColor = UIColor.redColor()
+            sender.setImage(UIImage(named: "like2"),forState: UIControlState.Normal)
+            likers?.append(username)
+            photo1["likers"] = likers
+            sender.LikeState = !sender.LikeState
+        }else{
+            sender.tintColor = UIColor.blackColor()
+            sender.setImage(UIImage(named: "like"),forState: UIControlState.Normal)
+            sender.LikeState = !sender.LikeState
+            let index = likers?.indexOf(username)
+            //print(likers)
+            likers?.removeAtIndex(index!)
+            print(likers)
+            photo1["likers"] = likers
+        }
+        photo1.saveInBackground()
+    }
 
     /*
     // MARK: - Navigation

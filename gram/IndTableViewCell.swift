@@ -15,7 +15,7 @@ class IndTableViewCell: UITableViewCell {
 
 
     @IBOutlet weak var photoView: PFImageView!
-    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var likeButton: LikeButton!
     @IBOutlet weak var captionLabel: UILabel!
     
     var gramPost: PFObject! {
